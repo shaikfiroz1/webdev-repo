@@ -18,6 +18,11 @@
     justify-content: space-between;
     padding : 0 16px;
     border-radius: 8px;
+     position: sticky;   /* sticks as you scroll */
+  top: 0;             /* sticks to the top */
+  z-index: 100;       /* stays above other content */
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .header .logo{color: #60a5fa; font-size: 18px; font-weight: 600;}
