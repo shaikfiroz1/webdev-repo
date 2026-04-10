@@ -67,4 +67,42 @@ body{
         flex-direction : column;
     }
 }
+.big-box{
+    background-color: pink;
+}
     
+.box{
+    position: relative;
+    width: 170px;
+    height  : 170px;
+    border: 2px solid black;
+   
+}
+#box-1{
+    position: relative;
+    background-color: #c3eacc;
+    top: 100px;
+    z-index:2;
+ 
+    
+}
+#box-2{
+    position: relative;
+    background-color: #08f03e;
+    bottom: -120px;
+    z-index:1;
+    
+   
+}
+#box-3{
+    position: relative;
+    background-color: #191b1a;
+    top:50px;
+    z-index:4;
+}
+#box-4{
+    position: relative;
+    background-color: #06532c;
+    z-index:3;
+}
+/* here we have operated of z-index with the help of z-inec */
