@@ -133,4 +133,10 @@ color: blue;
     font-size: 12px;
     cursor: pointer;
     width: 100px;
+   
+
+}
+.product-btn:hover{
+   transition: background .3s ease;
+   background-color: black;
 }
