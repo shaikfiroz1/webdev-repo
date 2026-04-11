@@ -121,10 +121,11 @@ color: blue;
 }
 .product-img{
    font-size: 50px;
-} source
+} 
+
 
 .product-btn {
-    background: transparent;
+    background: pink;
     color: #3b82f6;
     border: 2px solid black;
     border-radius: 6px;
@@ -133,10 +134,20 @@ color: blue;
     font-size: 12px;
     cursor: pointer;
     width: 100px;
-   
+   /* transition: background 1s ease-in-out; background color will change slowly */
+   /* transition: transform 0.3s ease; akes the button/element some bigger  */
+   transition: transform 0.3s ease, box-shadow 0.3s ease; Card lift on hover
+
 
 }
 .product-btn:hover{
-   transition: background .3s ease;
-   background-color: black;
+   
+   /* background: black; */  /*background color will change slowly*/ 
+   /* transform: scale(1.05);  makes the button/element some bigger  */
+   transform: translateY(-6px);
+   box-shadow: 0 12px 24px rgba(141, 9, 236, 0.2);
+
+
 }
+
+
