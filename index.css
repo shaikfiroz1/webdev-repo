@@ -97,6 +97,7 @@ color: blue;
    display: flex;
    justify-content: space-evenly;
    flex-wrap: wrap; 
+   flex-direction: column;
    
 }
 .product-card{
@@ -136,7 +137,9 @@ color: blue;
     width: 100px;
    /* transition: background 1s ease-in-out; background color will change slowly */
    /* transition: transform 0.3s ease; akes the button/element some bigger  */
-   transition: transform 0.3s ease, box-shadow 0.3s ease; Card lift on hover
+   /* transition: transform 0.3s ease, box-shadow 0.3s ease; Card lift on hover */
+   transition: transform 0.3s ease-in-out;
+   transition: transform 1s ease-in-out;
 
 
 }
@@ -144,10 +147,11 @@ color: blue;
    
    /* background: black; */  /*background color will change slowly*/ 
    /* transform: scale(1.05);  makes the button/element some bigger  */
-   transform: translateY(-6px);
-   box-shadow: 0 12px 24px rgba(141, 9, 236, 0.2);
+   /* transform: translateY(-6px);
+   box-shadow: 0 12px 24px rgba(141, 9, 236, 0.2); */
 
-
+ transform: rotate(360deg);
+ transform : translateX(100px);
 }
 
 
