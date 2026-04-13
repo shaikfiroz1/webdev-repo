@@ -35,3 +35,14 @@ let users =[
     }
 ]
 console.log(users[0].cities[3].villages[1]);
+
+function factorial(n){
+    if (n==0 || n==1){
+        return 1;
+    }
+    else{
+        return n*factorial(n-1);
+    }
+}
+let fact = factorial(5);
+console.log(fact);
