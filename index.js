@@ -46,3 +46,12 @@ function factorial(n){
 }
 let fact = factorial(5);
 console.log(fact);
+
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Async task done");
+}, 2000);
+
+console.log("End");
