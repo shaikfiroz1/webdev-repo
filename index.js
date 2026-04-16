@@ -55,3 +55,8 @@ setTimeout(() => {
 }, 2000);
 
 console.log("End");
+
+let fs = require("fs");
+let readmew = fs.readFileSync("grid.html","utf8");
+console.log(readmew);
+console.log("after the readfile ");
