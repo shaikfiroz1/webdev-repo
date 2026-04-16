@@ -60,3 +60,38 @@ let fs = require("fs");
 let readmew = fs.readFileSync("grid.html","utf8");
 console.log(readmew);
 console.log("after the readfile ");
+
+
+// let read1=fs.readFile("grid.html","utf8");
+// console.log(read1);
+// let read2 =fs.readFile("firoz.html","utf8");
+// console.log(read2);
+
+// let read3 =fs.readFile("grid.html","utf8");
+// console.log("readding after ");
+ 
+
+let read1 =fs.readFile("grid.html","utf8",(err, data)=>{
+    if (err) console.log("first");
+    console.log("1");
+
+});
+let read2 =fs.readFile("firoz.html","utf8",(err, data)=>{
+    if (err) console.log("second");
+    console.log("2");  
+
+});
+let read3 =fs.readFile("grid.html","utf8",(err, data)=>{
+    if (err) console.log("third");
+    console.log("3");  
+
+});
+
+
+console.log ("first hi");
+
+setTimeout(() => {
+    console.log("second hi");
+}, 15000);
+
+console.log("third hi");
