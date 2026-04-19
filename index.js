@@ -212,23 +212,39 @@
 
 /* constructor */
 
-class animal {
-  constructor(name1, breed){
-    this.name1= name1 ;
-    this.breed=breed;
-  }
-}
-class dog extends animal{
-  constructor(name1 , breed){
-    super (name1, breed);
-  }
-bark(){
-  console.log("this dog "+this.name1+" and breed "+this.breed);
-}
+// class animal {
+//   constructor(name1, breed){
+//     this.name1= name1 ;
+//     this.breed=breed;
+//   }
+// }
+// class dog extends animal{
+//   constructor(name1 , breed){
+//     super (name1, breed);
+//   }
+// bark(){
+//   console.log("this dog "+this.name1+" and breed "+this.breed);
+// }
 
-}
-let ani = new dog("tommy ", "german "); 
-ani.bark();
+// }
+// let ani = new dog("tommy ", "german "); 
+// ani.bark();
 
-const date = new Date();
-console.log(date);
+// const date = new Date();
+// console.log(date.getDay());
+
+// const map = new Map()
+// map.set('name', 'firoz');
+// map.set('age',  28);
+// console.log (map.get('name'));
+
+let p = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Task completed");
+    console.log("before");
+  }, 2000);
+});
+ p.then((result) => {
+  console.log("dwc" +result);
+ });
+ console.log(p);
