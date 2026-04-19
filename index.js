@@ -96,6 +96,7 @@
 
 // console.log("third hi");
 
+
 // console.log("A");
 
 // setTimeout(() => {
@@ -193,17 +194,41 @@
 // }
 
 // doTask(callBack);
-function firstTask(cb) {
-  setTimeout(() => {
-    console.log("First done");
-    cb(); // run second only after first
-  }, 2000);
+
+// function firstTask(cb) {
+//   setTimeout(() => {
+//     console.log("First done");
+//     cb(); // run second only after first
+//   }, 2000);
+// }
+
+// function secondTask() {
+//   setTimeout(() => {
+//     console.log("Second done");
+//   }, 1000);
+// }
+
+// firstTask(secondTask);
+
+/* constructor */
+
+class animal {
+  constructor(name1, breed){
+    this.name1= name1 ;
+    this.breed=breed;
+  }
+}
+class dog extends animal{
+  constructor(name1 , breed){
+    super (name1, breed);
+  }
+bark(){
+  console.log("this dog "+this.name1+" and breed "+this.breed);
 }
 
-function secondTask() {
-  setTimeout(() => {
-    console.log("Second done");
-  }, 1000);
 }
+let ani = new dog("tommy ", "german "); 
+ani.bark();
 
-firstTask(secondTask);
+const date = new Date();
+console.log(date);
