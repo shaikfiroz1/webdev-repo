@@ -30,10 +30,24 @@
 
 // myPromise.then ( result =>  {console.log(result)});    
 
-const p = new Promise ( (resolve, reject) =>{
-    reject ("something is fishy")
-} )
-p.then(result=>{console.log(result)}).catch(error => {console.log(error)});
+// const p = new Promise ( (resolve, reject) =>{
+//     reject ("something is fishy")
+// } )
+// p.then(result=>{console.log(result)}).catch(error => {console.log(error)});
 
 
-Promise.resolve(55).then (result => {console.log('resolved log :', result)});
+// Promise.resolve(55).then (result => {console.log('resolved log :', result)});
+
+function delay (){
+   
+    return new Promise ( ( resolve , reject ) => {
+        setTimeout ( ()=>{
+        resolve ("things getting delayed by 5 mins")
+    },5000)
+});
+}
+
+let p = delay ();
+p.then (result =>{
+    console.log(result)
+})
