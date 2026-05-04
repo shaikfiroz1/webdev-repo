@@ -38,16 +38,20 @@
 
 // Promise.resolve(55).then (result => {console.log('resolved log :', result)});
 
-function delay (){
+// function delay (){
    
-    return new Promise ( ( resolve , reject ) => {
-        setTimeout ( ()=>{
-        resolve ("things getting delayed by 5 mins")
-    },5000)
-});
-}
+//     return new Promise ( ( resolve , reject ) => {
+//         setTimeout ( ()=>{
+//         resolve ("things getting delayed by 5 mins")
+//     },5000)
+// });
+// }
 
-let p = delay ();
-p.then (result =>{
-    console.log(result)
-})
+// let p = delay ();
+// p.then (result =>{
+//     console.log(result)
+// })
+
+const num= Promise.resolve(5);
+
+num.then( num => { num * 2}).then( (num => {num +10}) ).then ( (result => {"final value :", result }) );
