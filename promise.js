@@ -24,8 +24,16 @@
 
 //creating a simple promise 
 
-const myPromise = new Promise( (resolve,reject) =>{
-    resolve("hello wolrd")
-}  );
+// const myPromise = new Promise( (resolve,reject) =>{
+//     resolve("hello wolrd")
+// }  );
 
-myPromise.then ( result =>  {console.log(result)});    
+// myPromise.then ( result =>  {console.log(result)});    
+
+const p = new Promise ( (resolve, reject) =>{
+    reject ("something is fishy")
+} )
+p.then(result=>{console.log(result)}).catch(error => {console.log(error)});
+
+
+Promise.resolve(55).then (result => {console.log('resolved log :', result)});
