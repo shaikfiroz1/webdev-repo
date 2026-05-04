@@ -54,4 +54,4 @@
 
 const num= Promise.resolve(5);
 
-num.then( num => { num * 2}).then( (num => {num +10}) ).then ( (result => {"final value :", result }) );
+num.then( num =>  num * 2).then( (num => num +10) ).then ( result => console.log('final value :', result));
