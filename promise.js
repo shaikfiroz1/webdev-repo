@@ -52,6 +52,20 @@
 //     console.log(result)
 // })
 
-const num= Promise.resolve(5);
+// const num= Promise.resolve(5);
 
-num.then( num =>  num * 2).then( (num => num +10) ).then ( result => console.log('final value :', result));
+// num.then( num =>  num * 2).then( (num => num +10) ).then ( result => console.log('final value :', result));
+
+
+const p1 = Promise.resolve('user data ');
+
+const p2 = Promise.resolve ('order data');
+
+const p3 = Promise.resolve('payments data');
+
+Promise.all( [p1, p2, p3] ) .then (
+    results => {
+        console.log(results)
+    }
+);
+
