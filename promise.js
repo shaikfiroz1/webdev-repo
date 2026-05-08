@@ -69,16 +69,29 @@
 //     }
 // );
 
-const p1 = Promise.resolve('user data ');
+// const p1 = Promise.resolve('user data ');
 
-const p2 = Promise.reject ('order data');
+// const p2 = Promise.reject ('order data');
 
-const p3 = Promise.resolve('payments data');
+// const p3 = Promise.reject('payments data');
 
-Promise.all( [p1, p2, p3] ) .then (
-    results => {
-        console.log(results)
-    }
-).catch (error => {
-    console.log ('error : ', error)
-})
+// Promise.all( [p1, p2, p3] ) .then (
+//     results => {
+//         console.log(results)
+//     }
+// ).catch (error => {
+//     console.log ('error : ', error)
+// })
+// // if any one of the statement is rejected then all the following lines will not be picture b 
+// 
+
+const slow = new Promise((resolve) =>
+  setTimeout(() => resolve('Slow: 3s'), 3000)
+);
+ 
+const fast = new Promise((resolve) =>
+  setTimeout(() => resolve('Fast: 1s'), 1000)
+);
+ 
+Promise.race([slow, fast])
+  .then((winner) => console.log('Winner:', winner)); 
