@@ -23,3 +23,17 @@ def anagram (word1, word2):
     return all(v == 0 for v in freq.values())  
       
 print(anagram("firoz", "zofir"))
+
+
+def recursive(num):
+    new_list=[]
+    for ele in num :
+        if len(num[ele]) <= 1:
+          new_list.append(ele)
+        else:
+           recursive(ele)
+
+    return new_list    
+
+
+print("the new list may be " , recursive([1,[2,3]]))
