@@ -7,3 +7,8 @@ for n in a:
         s.add(n)
 
 print(s)
+
+print (a^b)
+print (a & b)
+print (a | b)
+print (a-b)
