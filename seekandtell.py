@@ -6,8 +6,16 @@
 
 
 
-with open("test", "r") as f :
-    content = f.read ()
-    print (f.tell())
-    f.seek(0)
-    print (f.tell())
+# with open("test", "r") as f :
+#     content = f.read ()
+#     print (f.tell())
+#     f.seek(0)
+#     print (f.tell())
+
+
+
+
+with open ("test", "r") as f :
+    f.seek (6,0)
+    content = f.read()
+    print (content)
