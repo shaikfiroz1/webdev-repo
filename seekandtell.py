@@ -15,7 +15,9 @@
 
 
 
-with open ("test", "r") as f :
-    f.seek (6,0)
-    content = f.read()
-    print (content)
+with open ("test" , "rb") as f :
+  
+
+    f.seek(-5,2)
+    print(f.tell())
+    print (f.read())
