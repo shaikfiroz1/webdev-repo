@@ -9,7 +9,7 @@ config_path= Path("config.json")
 try :
     with open (config_path, "w", encoding="utf-8") as f :
 
-        config = json.dump(defaults, fp)
+        config = json.dump(defaults, f)
     print ("The file is loaded at the json")
 
 
