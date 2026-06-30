@@ -7,9 +7,9 @@ defaults = {"theme": "dark", "language": "en", "font_size": 14}
 config_path= Path("config.json")
 
 try :
-    with open (config_path, "r", encoding="utf-8") as f :
+    with open (config_path, "w", encoding="utf-8") as f :
 
-        config = json.load(f)
+        config = json.dump(defaults, fp)
     print ("The file is loaded at the json")
 
 
