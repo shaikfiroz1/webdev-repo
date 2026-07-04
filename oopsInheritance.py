@@ -1,22 +1,42 @@
-class vehicle :
+# class vehicle :
 
-    def __init__(self, brand):
-        self.brand = brand
+#     def __init__(self, brand):
+#         self.brand = brand
 
-    def start_engine(self) :
-            print ("engine started")
-
-
-
-class car(vehicle) :
-    pass
+#     def start_engine(self) :
+#             print ("engine started")
 
 
 
-kar  = car("toyota")
+# class car(vehicle) :
+#     pass
 
-print (kar.brand)
 
-kar.start_engine()
+
+# kar  = car("toyota")
+
+# print (kar.brand)
+
+# kar.start_engine()
 
     
+
+
+
+
+
+class Employee :
+    
+    def work (self):
+        print ("Employee is working")
+
+
+class  SoftwareEngineer(Employee):
+
+    def work (self):
+        print ("Writing Python code")
+    
+    
+
+emp = SoftwareEngineer()
+emp.work()
