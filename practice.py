@@ -57,28 +57,64 @@
 # Create three objects representing three different stock positions and print each one's total invested value (quantity × avg_price) using a loop.
 
 
-class StockPosition :
+# class StockPosition :
 
-    def __init__(self, symbol, quantity, avg_price):
+#     def __init__(self, symbol, quantity, avg_price):
 
-        self.symbol = symbol
-        self.quantity= quantity
-        self.avg_price = avg_price
+#         self.symbol = symbol
+#         self.quantity= quantity
+#         self.avg_price = avg_price
 
-    def total(self):
-        print( self.quantity*self.avg_price )
-
-
-account1 = StockPosition("S", 2,3)
-account2 = StockPosition("B", 2,4)     
-account3 = StockPosition("N", 2,5)  
+#     def total(self):
+#         print( self.quantity*self.avg_price )
 
 
-positions = [account1, account2,account3]
+# account1 = StockPosition("S", 2,3)
+# account2 = StockPosition("B", 2,4)     
+# account3 = StockPosition("N", 2,5)  
 
 
-for pos in positions :
+# positions = [account1, account2,account3]
 
-    pos.total()
+
+# for pos in positions :
+
+#     pos.total()
+
+
+# Write a class `Employee` where `__init__` takes `name` and `salary`, 
+# and raises a `ValueError` if `salary` is negative, using proper `self` usage. Test it with both a valid and an invalid value (using try/except).
+
+
+class Employee :
+
+    def __init__(self, name , salary ):
+
+        if salary <0:
+            raise ValueError("salary can be negative ")
+        self.name = name
+        self.salary = salary
+
+
+emp2 = Employee("Azis_khan", -200)
+
+
+try :
+    emp1 = Employee("Firoz", 10000)
+    print (f"{emp1.name} : {emp1.salary}")
+
+except ValueError as e :
+    print ("error : " ,e)
+
+try :
+    emp2 = Employee("Firoz", 10000)
+    print (f"{emp2.name} : {emp2.salary}")
+
+except ValueError as e :
+    print("error : " ,e)
+
+
+    
+
 
     
